@@ -6,11 +6,11 @@ import csv
 import hashlib
 
 if __name__ == "__main__":
-    begin_content = 'BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//hacksw/handcal//NONSGML v1.0//EN\nX-WR-TIMEZONE:Asia/Kolkata\n'
+    begin_content = 'BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//hacksw/handcal//NONSGML v1.0//EN\nTZID:Asia/Kolkata\nX-LIC-LOCATION:Asia/Kolkata\n'
     end_content = 'END:VCALENDAR'
     all_events = ''
 
-    with open("/home/aditya/Documents/events.csv", 'r') as file:
+    with open("./events.csv", 'r') as file:
         csvreader = csv.reader(file, delimiter=';')
         for row in csvreader:
             if row[0] != 'Subject':
@@ -18,8 +18,8 @@ if __name__ == "__main__":
                 event_content = 'BEGIN:VEVENT\n'
                 event_content = event_content + 'SUMMARY:' + row[0] + '\n'
                 event_content = event_content + 'UID:' + hashlib.md5(raw_id.encode('utf-8')).hexdigest() + '\n'
-                event_content = event_content + 'DTSTART:' + row[1] + '\n'
-                event_content = event_content + 'DTEND:' + row[2] + '\n'
+                event_content = event_content + 'DTSTART;TZID=Asia/Kolkata;VALUE=DATE-TIME:' + row[1] + '\n'
+                event_content = event_content + 'DTEND;TZID=Asia/Kolkata;VALUE=DATE-TIME:' + row[2] + '\n'
                 event_content = event_content + 'LOCATION:' + row[3] + '\n'
                 event_content = event_content + 'DESCRIPTION:' + row[4] + '\n'
                 event_content = event_content + 'END:VEVENT\n'
