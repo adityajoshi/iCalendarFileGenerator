@@ -1,16 +1,1 @@
-Subject;Start Timestamp;End Timestamp;Location;Description
-Day 1, The Ashes 3rd Test;20230706T153000;20230706T223000;"Leeds, UK";Day 1 of 3rd Test
-Day 2, The Ashes 3rd Test;20230707T153000;20230707T223000;"Leeds, UK";Day 2 of 3rd Test
-Day 3, The Ashes 3rd Test;20230708T153000;20230708T223000;"Leeds, UK";Day 3 of 3rd Test
-Day 4, The Ashes 3rd Test;20230709T153000;20230709T223000;"Leeds, UK";Day 4 of 3rd Test
-Day 5, The Ashes 3rd Test;20230710T153000;20230710T223000;"Leeds, UK";Day 5 of 3rd Test
-Day 1, The Ashes 4th Test;20230719T153000;20230719T223000;"Old Trafford, Manchester";Day 1 of 4th Test
-Day 2, The Ashes 4th Test;20230720T153000;20230720T223000;"Old Trafford, Manchester";Day 2 of 4th Test
-Day 3, The Ashes 4th Test;20230721T153000;20230721T223000;"Old Trafford, Manchester";Day 3 of 4th Test
-Day 4, The Ashes 4th Test;20230722T153000;20230722T223000;"Old Trafford, Manchester";Day 4 of 4th Test
-Day 5, The Ashes 4th Test;20230723T153000;20230723T223000;"Old Trafford, Manchester";Day 5 of 4th Test
-Day 1, The Ashes 5th Test;20230727T153000;20230727T223000;"The Oval, Kennington, London";Day 1 of 5th Test
-Day 2, The Ashes 5th Test;20230728T153000;20230728T223000;"The Oval, Kennington, London";Day 2 of 5th Test
-Day 3, The Ashes 5th Test;20230729T153000;20230729T223000;"The Oval, Kennington, London";Day 3 of 5th Test
-Day 4, The Ashes 5th Test;20230730T153000;20230730T223000;"The Oval, Kennington, London";Day 4 of 5th Test
-Day 5, The Ashes 5th Test;20230731T153000;20230731T223000;"The Oval, Kennington, London";Day 5 of 5th Test
+Subject;Start Timestamp;End Timestamp;Location;Description;Repeat;Freq;Reminder;Trigger;Action

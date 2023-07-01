@@ -20,8 +20,17 @@ if __name__ == "__main__":
                 event_content = event_content + 'UID:' + hashlib.md5(raw_id.encode('utf-8')).hexdigest() + '\n'
                 event_content = event_content + 'DTSTART;TZID=Asia/Kolkata;VALUE=DATE-TIME:' + row[1] + '\n'
                 event_content = event_content + 'DTEND;TZID=Asia/Kolkata;VALUE=DATE-TIME:' + row[2] + '\n'
-                event_content = event_content + 'LOCATION:' + row[3] + '\n'
-                event_content = event_content + 'DESCRIPTION:' + row[4] + '\n'
+                if row[3]:
+                    event_content = event_content + 'LOCATION:' + row[3] + '\n'
+                if row[4]:
+                    event_content = event_content + 'DESCRIPTION:' + row[4] + '\n'
+                if row[5] == 'Y':
+                    event_content = event_content + 'RRULE:FREQ=' + row[6] + '\n'
+                if row[7] == 'Y':
+                    event_content = event_content + 'BEGIN:VALARM\n'
+                    event_content = event_content + 'TRIGGER:' + row[8] + '\n'
+                    event_content = event_content + 'ACTION:' + row[9] + '\n'
+                    event_content = event_content + 'END:VALARM\n'
                 event_content = event_content + 'END:VEVENT\n'
                 all_events = all_events + event_content
 
